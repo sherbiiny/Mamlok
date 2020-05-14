@@ -1,0 +1,41 @@
+$prim: #2c1c94;
+$sec: #04c4bc;
+$sm: 600px;
+$md: 960px;
+$lg: 1264px;
+
+// Mixins
+@mixin centerElement() {
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+@mixin centerContent {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@mixin MQ($size) {
+  @media screen and (min-width: $size){
+    @content;
+  }
+}
+
+// Reset
+* {
+  margin: 0;
+  padding: 0;
+  outline: none;
+  text-decoration: none;
+  letter-spacing: 0 !important;
+}
+
+body {
+  direction: rtl;
+}
+
+.v-application {
+  font-family: 'Cairo' !important;
+}

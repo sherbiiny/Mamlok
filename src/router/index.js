@@ -1,23 +1,29 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
-import Home from '../views/Home.vue'
+import Landing from '@/views/Landing'
+import Financial from '@/views/Financial'
+import Technical from '@/views/Technical'
+import $ from 'jquery'
+import niceScroll from 'jquery.nicescroll'
 
 Vue.use(VueRouter)
 
-  const routes = [
+const routes = [
   {
     path: '/',
-    name: 'Home',
-    component: Home
+    name: 'Landing',
+    component: Landing
   },
   {
-    path: '/about',
-    name: 'About',
-    // route level code-splitting
-    // this generates a separate chunk (about.[hash].js) for this route
-    // which is lazy-loaded when the route is visited.
-    component: () => import(/* webpackChunkName: "about" */ '../views/About.vue')
-  }
+    path: '/financial',
+    name: 'Financial',
+    component: Financial
+  },
+  {
+    path: '/technical',
+    name: 'Technical',
+    component: Technical
+  },
 ]
 
 const router = new VueRouter({
